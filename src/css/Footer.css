@@ -90,6 +90,7 @@
     display: flex;
     justify-content: center;
     place-self: center;
+    right: 25%;
     bottom: -5%;
     width: 700px;
     height: 420px;
@@ -97,7 +98,7 @@
     opacity: 0.9;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 320px) {
   .footer-img-wrapper {
     height: 160px;
   }
