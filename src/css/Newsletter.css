@@ -1,0 +1,127 @@
+.newsletter-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-self: center;
+    padding: clamp(3rem, 8vw, 6rem) 1.5rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #fff7f2 0%, #ffeef9 40%, #fcfff4 100%);
+    width: 100%;
+    max-width: 2300px;
+}
+
+.newsletter-img-wrapper {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/newsletter-bg.png');
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+  filter: blur(10px);
+}
+
+
+/* Header */
+.newsletter-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.newsletter-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 3vw + 1rem, 3.4rem);
+    color: #fbace1; 
+    text-shadow: 2px 2px 2px rgb(38, 22, 22);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+} .newsletter-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    border-radius: 999px;
+    background: #f9a8d4;
+    margin: 0.75rem auto 0;
+} .newsletter-title .accent {
+    color: #f878b8;
+}
+.newsletter-subtitle {
+  color: #916c55;
+  max-width: 55ch;
+  margin: 0 auto;
+  line-height: 1.65;
+  font-size: 1rem;
+  margin-bottom: 4%;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    place-self: center;
+}
+
+.input-container input {
+    width: 460px;
+    border-radius: 999px;
+    border: 1px solid #f355a4;
+    padding: .55rem 1rem;
+    font-size: 0.95rem;
+    background: #ffffff;
+    margin-bottom: 4%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input-container input:focus,
+.input-container input:focus-visible {
+    outline: 2px solid #f355a4;
+    outline-offset: 2px;
+}
+
+.subscribe-btn {
+    position: absolute;
+    right: -5%;
+    bottom: -8%;
+    padding: .55rem 1rem;
+    width: 200px;
+    color: #f355a4;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    margin-bottom: 5%;
+}
+
+.newsletter-divider {
+    display: flex;
+    justify-self: center;
+    place-self: center;
+    margin: 0 auto;
+    height: 1px;
+    background: linear-gradient(20deg, #fbe8e8, #f355a4, #fbe8e8);
+    width: 75%;
+    margin-bottom: 2%;
+}
+
+/* Responsiveness */
+
+@media (max-width: 640px) {
+    .stats__newsletter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-self: center;
+    }
+    .input-container input {
+        width: 430px;
+    }
+    .subscribe-btn {
+        bottom: -.2rem;
+    }
+}

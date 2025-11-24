@@ -1,0 +1,105 @@
+/* ================================
+   Footer Wrapper
+================================ */
+.container__footer {
+  position: relative;
+  padding: clamp(3rem, 7vw, 2rem) 1.5rem; /* reduced max */
+  background: linear-gradient(180deg, #fff7f2 0%, #ffeef9 40%, #fcfff4 100%);
+  overflow: hidden;
+}
+
+/* Hero + Socials */
+.footer-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.social-tag a {
+  font-size: 1.45rem;
+  color: #ec4899;
+  background: #ffffffc9;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(248, 113, 159, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.social-tag a:hover {
+  transform: translateY(-3px);
+  background: #fdf2f8;
+  box-shadow: 0 8px 24px rgba(248, 113, 159, 0.35);
+}
+
+/* footer nav */
+.footer-content {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Grid on desktop */
+@media (min-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr 300px;
+    align-items: start;
+  }
+}
+
+.nav-links-title {
+    list-style: none;
+    margin-bottom: 0.65rem;
+}
+
+.nav-link-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f57088;
+    letter-spacing: -0.01em;
+}
+
+.nav-link a {
+    color: #f2787c;
+    line-height: 1.8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: .55rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link a:hover {
+    background: #f5708811;
+    padding: .55rem;
+    border-radius: 20px;
+}
+
+/* image */
+.footer-img-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    place-self: center;
+    bottom: -5%;
+    width: 700px;
+    height: 420px;
+    background: url('../images/footer-img.png') center/contain no-repeat;
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+  .footer-img-wrapper {
+    height: 160px;
+  }
+}
+

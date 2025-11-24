@@ -1,0 +1,129 @@
+/* ===========================
+     NAV WRAPPER
+   =========================== */
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff7f5; 
+  border-bottom: 1px solid #f6dede;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  max-width: 2400px;
+}
+
+/* ===========================
+     DESKTOP NAV
+   =========================== */
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.8rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #8b5e34;               /* warm bakery brown */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .8rem;
+    position: relative;
+    transition: color .2s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #f4a4a4;          /* soft rosy underline */
+    border-radius: 99px;
+    transition: width .25s ease;
+}
+
+.nav-links a:hover {
+  color: #ca6b6e;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+     MOBILE TOGGLE
+   =========================== */
+.hamburger-menu-wrapper {
+  display: none;
+}
+
+.hamburger-menu-btn {
+  border: none;
+  background: #ffe8e2;
+  color: #cc7a7a;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform .15s ease;
+}
+
+.hamburger-menu-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+     MOBILE PANEL
+   =========================== */
+.supple-links {
+  display: none;
+  background: #fff5f3;
+  border-bottom: 1px solid #f5dede;
+  padding: 1rem 1.25rem;
+}
+
+.supple-links.is-open {
+  display: grid;
+  gap: .75rem;
+}
+
+.supple-links a {
+  text-decoration: none;
+  color: #8b5e34;
+  font-weight: 600;
+  background: #ffecec;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+}
+
+.supple-links a:hover {
+  background: #ffd4d4;
+}
+
+/* ===========================
+     RESPONSIVE
+   =========================== */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger-menu-wrapper {
+    display: block;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    justify-content: space-between;
+  }
+}

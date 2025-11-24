@@ -1,0 +1,82 @@
+/* Spotlight section */
+.spotlight-section {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-self: center;
+    padding: clamp(3rem, 8vw, 6rem) 1.5rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #fff7f2 0%, #ffeef9 40%, #fcfff4 100%);
+    width: 100%;
+    max-width: 2300px;
+}
+
+/* Header */
+.spotlight-hero {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.spotlight-title {
+  font-family: "Playfair Display", serif;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  color: #7a4d34;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.spotlight-subtitle {
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+/* ================
+   Grid Layout
+   ================ */
+.emp-display-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.emp-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform .25s ease;
+
+    border-radius: 10px;
+}
+
+.emp-img-wrapper {
+    width: 100%;
+}
+
+.emp-info-wrapper {
+    position: absolute;
+    inset: 0;
+    background: rgba(149, 93, 93, 0);
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    color: #ffffff;
+    font-weight: 500;
+    transition: opacity .3s ease;
+}
+.emp-card:hover  .emp-info-wrapper {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.emp-name {
+    color: #fa7272;
+    font-weight: 500;
+    line-height: 1.5;
+}

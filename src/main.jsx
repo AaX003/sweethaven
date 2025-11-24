@@ -1,0 +1,12 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import "bootstrap/dist/css/bootstrap.min.css"; // bootstrap module
+import './index.css'
+
+import Root from './components/Root';
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Root />
+  </StrictMode>,
+)

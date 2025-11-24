@@ -1,0 +1,211 @@
+/* =========================
+   Contact Section
+   ========================= */
+.contact-section {
+    position: relative;
+    padding: clamp(3rem, 7vw, 6rem) 1.5rem;
+    background: linear-gradient(180deg, #fff7f2 0%, #ffeef9 40%, #fcfff4 100%);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.contact-hero {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 3vw + 1rem, 3.4rem);
+    color: #f4a4d9; 
+    text-shadow: 2px 2px 0px rgb(62, 36, 36);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+.contact-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    border-radius: 999px;
+    background: #f9a8d4;
+    margin: 0.75rem auto 0;
+  
+}
+
+.contact-subtitle {
+  max-width: 38rem;
+  margin: 0 auto;
+  color: var(--muted, #6b7280);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+/* =========================
+   Form
+   ========================= */
+.form-section {
+    background: #fff7fb;
+    border-radius: 18px;
+    padding: 1.75rem 1.5rem 2rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(248, 113, 159, 0.18);
+    width: 100%;
+    max-width: 1230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-self: center;
+    gap: 1rem 1.25rem;
+    margin-bottom: 2.5rem;
+    margin-right: 2%;
+}
+
+.form-section label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  gap: 0.35rem;
+}
+
+.form-section input,
+.form-section textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-section textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Focus state */
+.form-section input:focus-visible,
+.form-section textarea:focus-visible {
+  outline: none;
+  border-color: #f9738e;
+  box-shadow: 0 0 0 3px rgba(248, 113, 159, 0.22);
+  background: #fff;
+}
+
+/* Make message field span full width */
+#c-message {
+  width: 100%;
+}
+
+/* Button */
+.send-message-btn {
+  border: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 999px;
+  padding: 0.85rem 1.7rem;
+  background: linear-gradient(90deg, #ed879c, #e57b7b);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  gap: 0.35rem;
+  box-shadow: 0 16px 30px rgba(248, 113, 159, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.send-message-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+  box-shadow: 0 18px 38px rgba(248, 113, 159, 0.45);
+}
+
+.send-message-btn:focus-visible {
+  outline: 2px solid #f9738e;
+  outline-offset: 3px;
+}
+
+/* =========================
+   Work Schedule / Contact Info
+   ========================= */
+.work-schedule-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 100%;
+    max-width: 430px;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    border-radius: 18px;
+    background: #fef3c7;
+    border: 1px dashed rgba(248, 181, 91, 0.7);
+}
+
+.work-schedule-container figcaption {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.work-schedule-container .dow {
+    color: #ec4899;
+}
+
+.work-schedule-container a, 
+.work-schedule-container address {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.work-schedule-container a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 640px) {
+
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-self: center;
+    }
+    .form-section {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .form-section input,
+    .form-section textarea {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .send-message-btn {
+        width: 100%;
+        max-width: 330px;
+        justify-content: center;
+    }
+
+    .work-schedule-container {
+        padding: 1.25rem 1rem;
+    }
+}

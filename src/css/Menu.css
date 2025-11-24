@@ -1,0 +1,164 @@
+/* Menu Layout */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-self: center;
+    padding: clamp(3rem, 8vw, 6rem) 1.5rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #fff7f2 0%, #ffeef9 40%, #fcfff4 100%);
+    width: 100%;
+    max-width: 2300px;
+}
+
+.menu-title {
+  font-family: "Playfair Display", serif;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  color: #7a4d34;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.menu-subtitle {
+  max-width: 60ch;
+  margin: 0.5rem auto 2.5rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* Grid */
+.menu-display-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+/* Menu Card */
+.menu-item-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1.4rem;
+  border: 2px solid #f87171;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+}
+
+/* Image */
+.menu-item-img-wrapper {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.1));
+
+    transition: transform 0.4s ease;
+} .menu-item-img-wrapper:hover {
+    transform: scale(1.09);
+}
+
+/* Price Tag */
+.menu-item-price {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fde68a; /* sweet pastry gold */
+  color: #92400e;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+/* Category Tag */
+.menu-item-category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #febfbf;
+  color: #1e40af;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Menu banner */
+.menu-item-card-banner {
+    position: absolute;
+    top: -5%;
+    margin-top: 0.4rem;
+    background: #f87171;
+    color: #ffffff;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    animation: fadeOut 3s infinite ease;
+}
+
+@keyframes fadeOut {
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+}
+
+/* Title + Description */
+.menu-item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.4rem 0;
+}
+
+.menu-item-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.55;
+  max-width: 45ch;
+}
+
+/* ============================
+   Order Button
+============================ */
+.menu-order-btn {
+  margin-top: 1.2rem;
+  background: #f87171;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .25s ease, transform .2s ease;
+}
+
+.order-btn:hover {
+  background: #ef4444;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   Mobile Tweaks
+============================ */
+@media (max-width: 540px) {
+  .menu-item-img-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+}

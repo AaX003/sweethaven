@@ -1,0 +1,67 @@
+/* Section shell */
+.rewards-section {
+  position: relative;
+  padding: clamp(3rem, 7vw, 6rem) 1.5rem;
+  background: linear-gradient(180deg, #fff7f2 0%, #ffeef9 40%, #fcfff4 100%);
+  overflow: hidden;
+}
+
+/* Header */
+.rewards-hero {
+  max-width: 760px;
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.rewards-img-wrapper {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/rewards-bg.jpg');
+  background-size: cover;
+  background-position: top;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+  filter: blur(6px);
+}
+
+.rewards-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.2rem, 3vw + 1rem, 3.4rem);
+    color: #f4a4d9; 
+    text-shadow: 2px 2px 0px rgb(62, 36, 36);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+} .rewards-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    border-radius: 999px;
+    background: #f9a8d4;
+    margin: 0.75rem auto 0;
+}
+.rewards-subtitle {
+  color: #916c55;
+  max-width: 55ch;
+  margin: 0 auto;
+  line-height: 1.65;
+  font-size: 1rem;
+  margin-bottom: 2%;
+}
+.join-btn {
+    display: flex;
+    justify-content: center;
+    place-self: center;
+
+    border-radius: 999px;
+    padding: 0.85rem 1.7rem;
+    background: linear-gradient(90deg, #ed879c, #e57b7b);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
